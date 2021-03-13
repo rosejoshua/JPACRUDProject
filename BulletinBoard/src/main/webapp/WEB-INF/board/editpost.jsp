@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<h1>Bulletin Board (be nice!)</h1>
+<h1>Edit Post</h1>
 
 <table>
-<tr><td colspan="4"><hr></td></tr>
+
 <tr>
 <th>#</th>
 <th>Author</th>
@@ -45,7 +45,7 @@
 
 <tr>
 <form action="addPost.do" method="POST">
-<th><label for="inReplyTo">Re:</label></th>
+<th><label for="replyTo">Re:</label></th>
 <th><label for="author">Author:</label></th>
 <th colspan="2"><label for="post">Message:</label></th>
 </tr>

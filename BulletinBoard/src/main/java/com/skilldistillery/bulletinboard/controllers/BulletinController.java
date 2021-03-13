@@ -20,6 +20,8 @@ public class BulletinController {
 	@RequestMapping(path= {"/", "home.do"})
 	public String index(Model model) {
 		List<Bulletin> bulletinBoard = dao.showAll();
+		//list of integers of existing board ids to be used in dropdown
+		//add it to modell with a separate name
 		model.addAttribute("bulletinBoard", bulletinBoard);
 		return "index";
 	}
@@ -33,9 +35,17 @@ public class BulletinController {
 	}
 	
 	@RequestMapping(path="addPost.do", method=RequestMethod.POST)
-	public String addPost(String author, String post) {
-		Bulletin bulletin = new Bulletin(author, post);
+	public String addPost(String author, Integer inReplyTo, String post) {
+		Bulletin bulletin = new Bulletin(author, inReplyTo, post);
 		dao.addPost(bulletin);
+		return "redirect:home.do";
+		
+	}
+	
+	@RequestMapping(path="editPost.do", method=RequestMethod.POST)
+	public String editPost(int id, Integer inReplyTo, String message) {
+		dao.editPost(id, inReplyTo, message);
+		
 		return "redirect:home.do";
 		
 	}

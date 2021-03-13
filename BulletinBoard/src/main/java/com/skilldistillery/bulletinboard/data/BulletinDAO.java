@@ -12,5 +12,6 @@ public interface BulletinDAO {
 	List<Bulletin> showAll();
 	
 	void addPost(Bulletin bulletin);
+	void editPost(int id, Integer inReplyTo, String message);
 	
 }

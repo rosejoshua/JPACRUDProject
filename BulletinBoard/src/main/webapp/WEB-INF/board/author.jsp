@@ -14,7 +14,7 @@
 <table>
 <thead>
 <tr>
-<th>Post ID</th>
+<th>#</th>
 <th>Author</th>
 <th>Post</th>
 <th>Datetime</th>
@@ -25,9 +25,8 @@
 <tr>
   <td>${b.id}</td>
   <td>${b.author}</td>
-  <td>${b.post}</td>
-  <td>[holder]</td>
-
+  <td><c:if test="${not empty b.inReplyTo}">Re: #${b.inReplyTo}...</c:if>${b.post}</td>
+  <td>${b.dateTime}</td>
 </tr>
 </c:forEach>
 </table>
