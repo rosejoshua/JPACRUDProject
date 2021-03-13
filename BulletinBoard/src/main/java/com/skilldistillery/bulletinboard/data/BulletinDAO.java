@@ -11,4 +11,6 @@ public interface BulletinDAO {
 	List<Bulletin> showAllByAuthor(String author);
 	List<Bulletin> showAll();
 	
+	void addPost(Bulletin bulletin);
+	
 }

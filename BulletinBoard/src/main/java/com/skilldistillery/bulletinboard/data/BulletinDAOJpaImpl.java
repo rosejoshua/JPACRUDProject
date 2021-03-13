@@ -3,6 +3,8 @@ package com.skilldistillery.bulletinboard.data;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -13,6 +15,8 @@ import com.skilldistillery.bulletinboard.entities.Bulletin;
 @Service
 @Transactional
 public class BulletinDAOJpaImpl implements BulletinDAO {
+	
+	
 	
 	@PersistenceContext
 	private EntityManager em;
@@ -32,6 +36,18 @@ public class BulletinDAOJpaImpl implements BulletinDAO {
 	public List<Bulletin> showAll() {
 		String jpql = "SELECT b FROM Bulletin b";
 		return em.createQuery(jpql, Bulletin.class).getResultList();
+	}
+
+	@Override
+	public void addPost(Bulletin bulletin) {
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("BulletinBoard");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(bulletin);
+		em.getTransaction().commit();
+				
+		
 	}
 	
 	

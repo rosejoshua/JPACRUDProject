@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.skilldistillery.bulletinboard.data.BulletinDAO;
 import com.skilldistillery.bulletinboard.entities.Bulletin;
@@ -29,6 +30,14 @@ public class BulletinController {
 		model.addAttribute("authorBoard", board);
 		return "board/author";
 	
+	}
+	
+	@RequestMapping(path="addPost.do", method=RequestMethod.POST)
+	public String addPost(String author, String post) {
+		Bulletin bulletin = new Bulletin(author, post);
+		dao.addPost(bulletin);
+		return "redirect:home.do";
+		
 	}
 
 }

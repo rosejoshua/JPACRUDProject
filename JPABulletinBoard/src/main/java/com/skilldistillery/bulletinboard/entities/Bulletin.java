@@ -17,6 +17,11 @@ public class Bulletin {
 		//METHODS
 	
 	public Bulletin() {}
+	
+	public Bulletin(String author, String post) {
+		this.author = author;
+		this.post = post;
+	}
 
 	public int getId() {
 		return id;
