@@ -29,9 +29,9 @@ public class BulletinDAOJpaImpl implements BulletinDAO {
 	}
 
 	@Override
-	public List<Bulletin> showAll(String author) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Bulletin> showAll() {
+		String jpql = "SELECT b FROM Bulletin b";
+		return em.createQuery(jpql, Bulletin.class).getResultList();
 	}
 	
 	

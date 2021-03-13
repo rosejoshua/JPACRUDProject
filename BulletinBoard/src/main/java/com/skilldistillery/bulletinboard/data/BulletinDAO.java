@@ -9,8 +9,6 @@ public interface BulletinDAO {
 	Bulletin findById(int bulletinId);
 	
 	List<Bulletin> showAllByAuthor(String author);
-	List<Bulletin> showAll(String author);
+	List<Bulletin> showAll();
 	
-	
-
 }

@@ -4,12 +4,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Old-School Bulletin Board</title>
+	<title>Author Posts</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<h1>Bulletin Board (be nice!)</h1>
+<h1>Author Posts</h1>
 
 <table>
 <thead>
@@ -21,10 +21,10 @@
 </tr>
 
 </thead>
-<c:forEach var="b" items="${bulletinBoard}">
+<c:forEach var="b" items="${authorBoard}">
 <tr>
   <td>${b.id}</td>
-  <td><a href="getAllAuthor.do?author=${b.author}">${b.author}</a></td>
+  <td>${b.author}</td>
   <td>${b.post}</td>
   <td>[holder]</td>
 
