@@ -53,7 +53,7 @@
 <tr>
   <td>   
    <select name="inReplyTo" id="inReplyTo">
-    <option value="null">n/a</option>
+    <option value=0>n/a</option>
     	<c:forEach var="b" items="${bulletinBoard}">
     	<option value="${b.id}">${b.id}</option>
 		</c:forEach>

@@ -30,14 +30,21 @@ public class BulletinController {
 	public String showAuthor(String author, Model model) {
 		List<Bulletin> board = dao.showAllByAuthor(author);
 		model.addAttribute("authorBoard", board);
+		model.addAttribute("author", author);
 		return "board/author";
 	
 	}
 	
 	@RequestMapping(path="addPost.do", method=RequestMethod.POST)
 	public String addPost(String author, Integer inReplyTo, String post) {
-		Bulletin bulletin = new Bulletin(author, inReplyTo, post);
-		dao.addPost(bulletin);
+		if (inReplyTo.intValue()==0) {
+			Bulletin bulletin = new Bulletin(author, null, post);			
+			dao.addPost(bulletin);
+		}
+		else {			
+			Bulletin bulletin = new Bulletin(author, inReplyTo, post);			
+			dao.addPost(bulletin);
+		}
 		return "redirect:home.do";
 		
 	}

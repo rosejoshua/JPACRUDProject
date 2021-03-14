@@ -10,23 +10,31 @@
 </head>
 <body>
 <h1>Author Posts</h1>
+<h2>${author}</h2>
 
 <table>
-<thead>
+<tr><td colspan="4"><hr></td></tr>
 <tr>
 <th>#</th>
-<th>Author</th>
 <th>Post</th>
 <th>Datetime</th>
 </tr>
 
-</thead>
 <c:forEach var="b" items="${authorBoard}">
 <tr>
-  <td>${b.id}</td>
-  <td>${b.author}</td>
-  <td><c:if test="${not empty b.inReplyTo}">Re: #${b.inReplyTo}...</c:if>${b.post}</td>
+  <td>${b.id}</td>    
+    
+  <td>  
+  <c:if test="${not b.isDeleted}">
+  	<c:if test="${not empty b.inReplyTo}">Re: #${b.inReplyTo}...</c:if>
+		${b.post}
+  			<c:if test="${b.isEdited}"><i>[edited]</i></c:if>
+  </c:if>  
+  <c:if test="${b.isDeleted}"><i>[DELETED BY AUTHOR]</i></c:if>  
+  </td> 
+   
   <td>${b.dateTime}</td>
+
 </tr>
 </c:forEach>
 </table>

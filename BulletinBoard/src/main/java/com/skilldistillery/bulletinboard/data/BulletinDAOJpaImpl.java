@@ -59,6 +59,7 @@ public class BulletinDAOJpaImpl implements BulletinDAO {
 		Bulletin b = em.find(Bulletin.class, id);
 		b.setPost(message);
 		b.setInReplyTo(inReplyTo);
+		b.setIsEdited(true);
 		em.getTransaction().commit();
 
 		

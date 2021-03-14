@@ -41,6 +41,8 @@ public class Bulletin {
 		this.author = author;
 		this.post = post;
 		dateTime = LocalDateTime.now();
+		this.isDeleted = false;
+		this.isEdited = false;
 	}
 	
 	public Bulletin(String author, Integer inReplyTo, String post) {
@@ -48,6 +50,9 @@ public class Bulletin {
 		this.inReplyTo = inReplyTo;
 		this.post = post;
 		dateTime = LocalDateTime.now();
+		this.isDeleted = false;
+		this.isEdited = false;
+		
 	}
 
 	public int getId() {
