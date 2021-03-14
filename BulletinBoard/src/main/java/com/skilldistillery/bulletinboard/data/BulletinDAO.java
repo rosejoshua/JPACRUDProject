@@ -6,7 +6,7 @@ import com.skilldistillery.bulletinboard.entities.Bulletin;
 
 public interface BulletinDAO {
 	
-	Bulletin findById(int bulletinId);
+	Bulletin findById(Integer bulletinId);
 	
 	List<Bulletin> showAllByAuthor(String author);
 	List<Bulletin> showAll();

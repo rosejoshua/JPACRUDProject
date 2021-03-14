@@ -22,8 +22,8 @@ public class BulletinDAOJpaImpl implements BulletinDAO {
 	private EntityManager em;
 
 	@Override
-	public Bulletin findById(int bulletinId) {
-		return em.find(Bulletin.class, bulletinId);
+	public Bulletin findById(Integer bulletinId) {
+		return em.find(Bulletin.class, bulletinId.intValue());
 	}
 
 	@Override
