@@ -56,8 +56,16 @@ public class BulletinController {
 	}
 	
 	@RequestMapping(path="editPost.do", method=RequestMethod.POST)
-	public String editPost(int id, Integer inReplyTo, String message) {
-		dao.editPost(id, inReplyTo, message);
+	public String editPost(Integer postId, String post) {
+		dao.editPost(postId.intValue(), post);
+		
+		return "redirect:home.do";
+		
+	}
+
+	@RequestMapping(path="deletePost.do", method=RequestMethod.POST)
+	public String deletePost(Integer postId) {
+		dao.deletePost(postId.intValue());
 		
 		return "redirect:home.do";
 		

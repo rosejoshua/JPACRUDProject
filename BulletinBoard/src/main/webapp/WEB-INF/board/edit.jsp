@@ -14,28 +14,36 @@
 
 <table>
 <tr><td colspan="4"><hr></td></tr>
-<tr>
+<!--  -->
+
+
+
+
+<form action="editPost.do" method="POST">
 <th>#</th>
-<th>Post</th>
-<th>Datetime</th>
+<th colspan="2"><label for="post">Post</label></th>
 </tr>
 
 <tr>
-  <td>${bulletin.id}</td>    
-    
-  <td>  
-  <c:if test="${not b.isDeleted}">
-  	<c:if test="${not empty b.inReplyTo}">Re: #${b.inReplyTo}...</c:if>
-		${bulletin.post}
-  			<c:if test="${bulletin.isEdited}"><i>[edited]</i></c:if>
-  </c:if>  
-  <c:if test="${bulletin.isDeleted}"><i>[DELETED BY AUTHOR]</i></c:if>  
-  </td> 
-   
-  <td>${bulletin.dateTime}</td>
+  <td>   
+${bulletin.id}
+  </td>  
 
+  <td>
+  <input type="text" id="post" name="post" value="${bulletin.post}" size="50"/>
+  </td>
+  <td>
+  <button type="submit" id="postId" name="postId" value="${bulletin.id}">Update Post</button>
+  </td>
 </tr>
 
+</form>
+
+
+
+
+
+<!--  -->
 </table>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>

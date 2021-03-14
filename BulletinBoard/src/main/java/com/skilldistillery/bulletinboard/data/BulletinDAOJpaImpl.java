@@ -47,22 +47,40 @@ public class BulletinDAOJpaImpl implements BulletinDAO {
 		em.persist(bulletin);
 		em.getTransaction().commit();
 
+		em.close();
+		emf.close();
 		
 	}
 
 	@Override
-	public void editPost(int id, Integer inReplyTo, String message) {
+	public void editPost(int id, String post) {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("BulletinBoard");
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 		Bulletin b = em.find(Bulletin.class, id);
-		b.setPost(message);
-		b.setInReplyTo(inReplyTo);
+		b.setPost(post);
 		b.setIsEdited(true);
 		em.getTransaction().commit();
+		
+		em.close();
+		emf.close();
 
 		
+	}
+
+	@Override
+	public void deletePost(int id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("BulletinBoard");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		Bulletin b = em.find(Bulletin.class, id);
+		b.setIsEdited(true);
+		b.setIsDeleted(true);
+		em.getTransaction().commit();
+		
+		em.close();
+		emf.close();		
 	}
 	
 	

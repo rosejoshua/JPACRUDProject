@@ -19,8 +19,7 @@
 <th>#</th>
 <th>Author</th>
 <th>Post</th>
-<th>Datetime</th>
-<th>[]</th>
+<th colspan="3">Datetime</th>
 </tr>
 
 <c:forEach var="b" items="${bulletinBoard}">
@@ -46,8 +45,12 @@
   <button name="postId" type="submit" value="${b.id}">Edit</button>
   </form>
   
-  <form>
-  <input type="submit" value="Delete" />
+  </td>
+  
+  <td>
+  
+  <form action="deletePost.do" method="POST">
+  <button name="postId" type="submit" value="${b.id}">Delete</button>
   </form>
   
   </td>
@@ -81,7 +84,7 @@
   <input type="text" id="post" name="post" size="50"/>
   </td>
   <td>
-  <input type="submit" value="Post Comment" />
+  <button name="submit" type="submit" value="${b.id}">Post to Board</button>
   </td>
 </tr>
 
