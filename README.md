@@ -2,7 +2,7 @@
 
 ### Description
 
-This is a fully functional front end website capable of CRUD operations on a SQL database. It utilizes Java Persistence API, SpringBoot, Gradle, MySql drivers, among others to allow data manipulation on the back end. Special care was taken to adhere to Object Oriented Programming, Encapsulation, and Separation of Concerns. More updates to follow shortly on the front-end when I learn Javascript.
+This is a fully functional front end website capable of CRUD operations on a SQL database. It is designed as a bulletin-board/message-board. It utilizes Java Persistence API, SpringBoot, Gradle, MySql drivers, among others to allow data manipulation on the back end. Special care was taken to adhere to Object Oriented Programming, Encapsulation, and Separation of Concerns. More updates to follow shortly on the front-end when I learn Javascript.
 
 ### Topics and Technologies
 
