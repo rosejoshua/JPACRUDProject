@@ -10,20 +10,30 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="header">
+<a href="home.do"><div class="container-fluid header">
+<div class="container header">
+	<div class="container row">
 
-    <h1>Bulletin Board</h1>
-
+		<div class="column widththird">
+		<img alt="peace sign" src="resources/peace.png" style="float:right">
+		</div>
+		<div class="column widththird">
+    	<h1>Bulletin Board</h1>
+    	<h2>Author Posts</h2>
+    	</div>
+		<div class="column widththird">
+		<img alt="peace sign" src="resources/peace.png" style="float:left">
+		</div>
+	</div>
 </div>
+</div></a>
+<hr>
 <div class="container-fluid">
-<h1>Author Posts</h1>
-<h2>${author}</h2>
 
 <table>
-<tr><td colspan="4"><hr></td></tr>
 <tr>
 <th>#</th>
-<th>Post</th>
+<th>Posts by ${author}</th>
 <th colspan="3">Datetime</th>
 </tr>
 
