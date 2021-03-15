@@ -1,9 +1,10 @@
 h1, h2 {
-  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
 
 h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   margin: 3px;
 }
 
@@ -14,7 +15,62 @@ h4 {
 
 body {
   margin: 0;
-  background-color: rgb(213, 213, 213);
+  background-color: #f4ffed;
+}
+
+div.container.row {
+	padding: 10px;
+}
+
+a {
+	color: #30b9f0;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: none;
+}
+
+div.container-fluid.header {
+	color: black;
+	text-decoration: none;
+	
+}
+
+a:hover {
+	color: #cb8fff;
+}
+
+
+hr {
+	border: none; 
+    height: 36px; 
+    background: #cb8fff;
+    margin: 0px;
+}
+
+table {
+	margin: 5px;
+}
+
+.purpleback {
+	background: #cb8fff;
+}
+
+.pinkback {
+	background: #ff8f8f;
+}
+
+th {
+	padding-right: 20px;
+}
+
+.pad8topbottom {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.height100 {
+	height: 100px;
 }
 
 .aBlack {
@@ -36,7 +92,14 @@ body {
 .header{
   text-align: center;
   padding: 1px;
-  background-color: #e0e0d1;
+  background-color: #fff86e;
+  max-height: 300px;
+}
+.footer{
+  text-align: center;
+  padding: 1px;
+  background-color: #fff86e;
+	height: auto;
 }
 
 .center {
@@ -44,34 +107,51 @@ body {
   margin-right: auto;
 }
 
-.niceButton {
-  background-color: #85adad;
+img {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.widththird {
+	width: 33%;
+}
+
+
+button {
+  background-color: #ff8f8f;
   text-transform:uppercase;
   border: none;
-  padding: 16px 32px;
-  margin: 4px 2px;
-  border-radius: 10px;
+  padding: 4px 8px;
+  margin: 4px 4px;
+  border-radius: 5px;
   font-weight: bold;
 }
 
 button:hover {
-  background-color: #ff8566;
-}
-
-th {
-  padding-left: 8px;
-  padding-right: 8px;
+  background-color: #fff86e;
 }
 
 td {
-  padding: 0px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
-h1, h2 {
-  padding: 0px 8px;
+h1 {
+  padding-top: 8px;
   text-align: center;
+  font-size: 50px;
+  font-weight: bold;
 
 }
+
+h2 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: bold;
+}
+
 h3 {
   padding: 8px 0px 8px 0px;
   text-align: center;
@@ -85,27 +165,6 @@ form {
 
 input {
   margin: 8px 0px 8px 0px;
-}
-
-input[type=submit] {
-  background-color: #85adad;
-  text-transform:uppercase;
-  border: none;
-  padding: 16px 32px;
-  margin: 4px 2px;
-  border-radius: 10px;
-  font-weight: bold;
-}
-input[type=submit]:hover {
-  background-color: #ff8566;
-}
-
-.noHover {
-  background-color: #85adad;
-}
-
-li.noHover:hover {
-  background-color: #85adad;
 }
 
 .customInputNumbers {
@@ -134,5 +193,5 @@ li a {
 }
 
 li:hover {
-  background-color: #ff8566;
+  background-color: #fff23b;
 }

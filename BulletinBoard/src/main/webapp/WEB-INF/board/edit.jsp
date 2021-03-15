@@ -10,10 +10,14 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="container-fluid">
-<h1>Edit Post</h1>
-<h2>${bulletin.author}</h2>
+<div class="header">
 
+    <h1>Bulletin Board</h1>
+
+</div>
+<div class="container-fluid">
+<h2>Edit Post</h2>
+<h2>${bulletin.author}</h2>
 <table>
 <tr><td colspan="4"><hr></td></tr>
 

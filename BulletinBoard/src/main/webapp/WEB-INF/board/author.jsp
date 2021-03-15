@@ -10,6 +10,11 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="header">
+
+    <h1>Bulletin Board</h1>
+
+</div>
 <div class="container-fluid">
 <h1>Author Posts</h1>
 <h2>${author}</h2>
@@ -47,7 +52,7 @@
   <td>
   
   <form action="deletePost.do" method="POST">
-  <button name="postId" type="submit" value="${b.id}">Delete</button>
+  <button name="postId" type="submit" value="${b.id}" onclick="return confirm('Are you sure? This CANNOT be undone.');">Delete</button>
   </form>
   
   </td>
