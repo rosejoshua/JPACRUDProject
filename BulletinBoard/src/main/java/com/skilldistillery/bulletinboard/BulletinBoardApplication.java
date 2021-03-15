@@ -2,9 +2,16 @@ package com.skilldistillery.bulletinboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class BulletinBoardApplication {
+public class BulletinBoardApplication extends SpringBootServletInitializer {
+	
+	  @Override
+	  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	    return application.sources(BulletinBoardApplication.class);
+	  }
 
 	public static void main(String[] args) {
 		SpringApplication.run(BulletinBoardApplication.class, args);
